@@ -18,12 +18,21 @@ public class FullNameParser {
         //A string variable named spaces that looks at our full name and uses method.spit
         String[] splitName = fullName.split(" ");
 
-        String firstName = splitName[0];
-        String middleName = splitName[1];
-        if (middleName.isEmpty()){
-            System.out.println("Middle Name: ");
+        String firstName = splitName[0];//address 0 is first value.
+        String middleName;
+        String lastName;
+
+
+        if (splitName.length == 2){
+            middleName = "";
+            lastName = splitName[1];
         }
-        String lastName = splitName[2];
+        else {
+            middleName = splitName[1];
+            lastName = splitName[2];
+        }
+
+
 
         //Display the users name in 1 of 2 ways
 
